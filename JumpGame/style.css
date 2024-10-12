@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  background-image: url(./images/wallpaper.jpg);
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 80px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+#game {
+  width: 750px;
+  height: 500px;
+  background-image: url(./images/bg6.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  filter: drop-shadow(0 0 0.5rem white);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#floor {
+  width: 100%;
+  height: 50px;
+  background-color: grey;
+  position: absolute;
+  bottom: 0;
+  filter: drop-shadow(0 2mm 2mm grey);
+}
+
+#character {
+  width: 50px;
+  height: 50px;
+  background-image: url(./images/alien.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 50px;
+  right: calc(100% - 100px);
+}
+
+.obstacle {
+  width: 30px;
+  height: 100px;
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+  filter: drop-shadow(0 0 0.5rem rgb(220, 197, 20));
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+  color: white;
+}
+
+h5 {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 30px;
+  color: white;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+}
