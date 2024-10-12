@@ -62,7 +62,7 @@ const arrayBackground = [
 // Load sound effects
 const jumpSound = new Audio("./audio/cartoon-jump.mp3");
 const crashSound = new Audio("./audio/arcade-explosion.wav");
-const bgm = new Audio('./audio/space-bgm.mp3');
+const bgm = new Audio("./audio/space-bgm.mp3");
 
 function playJumpSound() {
   jumpSound.play();
@@ -98,7 +98,6 @@ const jump = () => {
         }
         characterBottom -= 10;
         character.style.bottom = characterBottom + "px";
-        playJumpSound();
       }, 20);
     }
     characterBottom += 10;
@@ -167,6 +166,7 @@ Will you leap again to finish the mission?\n\nFinal Score: ` +
 const control = (e) => {
   if (e.key == "ArrowUp" || e.key == " ") {
     jump();
+    playJumpSound();
   }
 };
 
@@ -182,7 +182,7 @@ With each jump, you're closer to bringing back the light to the universe.
 Gear up, the stars are waiting for you!`);
   setInterval(showScore, 100);
   generateObstacles();
-  startBGM()
+  startBGM();
 };
 
 game();
